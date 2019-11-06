@@ -7,7 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http, BaseRequestOptions } from '@angular/http';
-import { RouterModule } from '@angular/router'; 
+import { RouterModule } from '@angular/router';
+import {AUTH_PROVIDERS} from 'angular2-jwt';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -45,6 +46,8 @@ import { AdminAuthGuard } from './services/admin-auth-guard.service';
     ])
   ],
   providers: [
+    AUTH_PROVIDERS,
+
     OrderService,
 
     AuthService,
